@@ -49,7 +49,7 @@ export default function Project() {
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="col-span-4 shadow hover:shadow-sm hover:scale-[1.01] rounded-2xl transition-all duration-500 ease-in-out"
+                className="col-span-4 shadow hover:shadow-sm rounded-2xl"
               >
                 <div className="w-full h-full bg-white">
                   <div className="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
@@ -80,18 +80,18 @@ export default function Project() {
                         ))}
                       {project.techStack.length >
                         TECH_STACK_ICON_MAX_LENGTH && (
-                        <span
-                          className="text-sm font-medium text-gray-500"
-                          title={project.techStack
-                            .slice(TECH_STACK_ICON_MAX_LENGTH)
-                            .map((tech) => tech.name)
-                            .join(", ")}
-                        >
-                          +
-                          {project.techStack.length -
-                            TECH_STACK_ICON_MAX_LENGTH}
-                        </span>
-                      )}
+                          <span
+                            className="text-sm font-medium text-gray-500"
+                            title={project.techStack
+                              .slice(TECH_STACK_ICON_MAX_LENGTH)
+                              .map((tech) => tech.name)
+                              .join(", ")}
+                          >
+                            +
+                            {project.techStack.length -
+                              TECH_STACK_ICON_MAX_LENGTH}
+                          </span>
+                        )}
                     </div>
                     <h5 className="mb-2 text-base font-bold line-clamp-1">
                       {project.title}
