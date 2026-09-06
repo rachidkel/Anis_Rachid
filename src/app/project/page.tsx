@@ -80,18 +80,18 @@ export default function Project() {
                         ))}
                       {project.techStack.length >
                         TECH_STACK_ICON_MAX_LENGTH && (
-                          <span
-                            className="text-sm font-medium text-gray-500"
-                            title={project.techStack
-                              .slice(TECH_STACK_ICON_MAX_LENGTH)
-                              .map((tech) => tech.name)
-                              .join(", ")}
-                          >
-                            +
-                            {project.techStack.length -
-                              TECH_STACK_ICON_MAX_LENGTH}
-                          </span>
-                        )}
+                        <span
+                          className="text-sm font-medium text-gray-500"
+                          title={project.techStack
+                            .slice(TECH_STACK_ICON_MAX_LENGTH)
+                            .map((tech) => tech.name)
+                            .join(", ")}
+                        >
+                          +
+                          {project.techStack.length -
+                            TECH_STACK_ICON_MAX_LENGTH}
+                        </span>
+                      )}
                     </div>
                     <h5 className="mb-2 text-base font-bold line-clamp-1">
                       {project.title}

@@ -200,6 +200,59 @@ Your 3D avatar appears in two places. Replace these files:
 
 **Create your own 3D character at [peeps.ui8.net](https://peeps.ui8.net/)**
 
+### Customizing Let's Connect Icons
+
+The Let's Connect section has 5 fixed positions. Configure them in `src/config/index.ts`:
+
+```typescript
+import { ASSETS } from "@/constant/assets";
+
+letsConnect: {
+  topLeft: {
+    icon: ASSETS.home.letsConnect.linkedin,
+    href: "https://www.linkedin.com/in/yourname",
+    label: "LinkedIn",
+  },
+  topRight: {
+    icon: ASSETS.home.letsConnect.instagram,
+    href: "https://www.instagram.com/yourname",
+    label: "Instagram",
+  },
+  bottomRight: {
+    icon: ASSETS.home.letsConnect.github,
+    href: "https://github.com/yourname",
+    label: "GitHub",
+  },
+  bottomLeft: {
+    icon: ASSETS.home.letsConnect.dribbble,
+    href: "https://dribbble.com/yourname",
+    label: "Dribbble",
+  },
+  bottomCenter: {
+    icon: ASSETS.home.letsConnect.gmail,
+    href: "mailto:your@email.com",
+    label: "Email",
+  },
+}
+```
+
+- `icon` must be an `ASSETS` reference (e.g. `ASSETS.home.letsConnect.youtube`).
+- Available icons: `behance`, `discord`, `dribbble`, `facebook`, `github`, `gmail`, `instagram`, `linkedin`, `pinterest`, `slack`, `tiktok`, `twitter`, `youtube` (files in `src/assets/images/home/letsConnect/`).
+- `href` supports `https://` and `mailto:`.
+- To hide a position, comment it out or set to `null`:
+
+```typescript
+// topLeft: {
+//   icon: ASSETS.home.letsConnect.linkedin,
+//   href: "https://...",
+//   label: "LinkedIn",
+// },
+// or
+topLeft: null,
+```
+
+To add a new icon, place a `.webp` file in `src/assets/images/home/letsConnect/`, register it in `src/constant/assets.ts` (`ASSETS.home.letsConnect`), then use it in the config.
+
 ### Customizing Colors
 
 Edit the theme colors in `src/app/globals.css`:

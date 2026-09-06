@@ -10,6 +10,21 @@ declare type NavigationLink = {
   href: string;
 };
 
+declare type LetsConnectSlot = {
+  icon: StaticImageData;
+  href: string;
+  label: string;
+} | null;
+
+// 5 fixed slots, optional to allow commenting out
+declare type LetsConnectConfig = {
+  topLeft?: LetsConnectSlot;
+  topRight?: LetsConnectSlot;
+  bottomRight?: LetsConnectSlot;
+  bottomLeft?: LetsConnectSlot;
+  bottomCenter?: LetsConnectSlot;
+};
+
 declare type Config = {
   name: {
     first: string;
@@ -28,6 +43,7 @@ declare type Config = {
     instagram: string;
     dribbble: string;
   };
+  letsConnect: LetsConnectConfig;
   techStacks: TechStack[];
   resume: {
     fileName: string;

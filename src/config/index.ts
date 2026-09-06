@@ -1,3 +1,4 @@
+import { ASSETS } from "@/constant/assets";
 import { TECH_STACK } from "../constant/tech-stack";
 
 /**
@@ -19,6 +20,34 @@ export const CONFIG = {
     linkedin: "https://www.linkedin.com/in/deri-kurniawan",
     instagram: "https://www.instagram.com/deri561",
     dribbble: "https://dribbble.com/deri-kurniawan",
+  },
+  // Let's Connect: 5 fixed positions. Use ASSETS for icon, comment out or set null to hide.
+  letsConnect: {
+    topLeft: {
+      icon: ASSETS.home.letsConnect.linkedin,
+      href: "https://www.linkedin.com/in/deri-kurniawan",
+      label: "LinkedIn",
+    },
+    topRight: {
+      icon: ASSETS.home.letsConnect.instagram,
+      href: "https://www.instagram.com/deri561",
+      label: "Instagram",
+    },
+    bottomRight: {
+      icon: ASSETS.home.letsConnect.github,
+      href: "https://github.com/Deri-Kurniawan",
+      label: "GitHub",
+    },
+    bottomLeft: {
+      icon: ASSETS.home.letsConnect.twitter,
+      href: "https://x.com/derii561",
+      label: "X (Twitter)",
+    },
+    bottomCenter: {
+      icon: ASSETS.home.letsConnect.gmail,
+      href: "mailto:hi@derikn.com",
+      label: "Email",
+    },
   },
   quotes: {
     text: "This portfolio was made with heart and soul, pouring passion and creativity into every detail to bring it to life. It&apos;s not just a portfolio, it&apos;s a labor of love.",
