@@ -141,7 +141,7 @@ const MyLatestProjectSection = () => {
                               }}
                               onClick={() =>
                                 setSelectedVideo({
-                                  src: item.videoFile || item.urls?.demo || "",
+                                  src: item.videoFile || "",
                                   title: item.title,
                                 })
                               }
