@@ -30,7 +30,7 @@ export const CONFIG = {
     },
     topRight: {
       icon: ASSETS.home.letsConnect.instagram,
-      href: "https://www.instagram.com/kl._anis/",
+      href: "https://www.instagram.com/kl._anis",
       label: "Instagram",
     },
     bottomRight: {
@@ -45,7 +45,7 @@ export const CONFIG = {
     },
     bottomCenter: {
       icon: ASSETS.home.letsConnect.gmail,
-      href: "mailto:hi@derikn.com",
+      href: "mailto:aniskel96@gmail.com",
       label: "Email",
     },
   },
