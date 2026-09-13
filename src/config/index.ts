@@ -71,7 +71,7 @@ projects: [
     title: " Social media",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/2.7.png",
-    videoFile: "/videos/filess/rabic ai platforme.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/PnkobUFvaak", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -81,7 +81,7 @@ projects: [
     title: "Socail Media ADS",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/1.3.png.png",
-    videoFile: "/videos/filess/ads edit with sfx.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/aLmo3JoY_ys", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "socail media ads",
@@ -90,7 +90,7 @@ projects: [
     title: "Podcast",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/2.3.pmg.png",
-    videoFile: "/videos/filess/viral style .mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/fvjgS5OURPE", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -99,7 +99,7 @@ projects: [
     title: "Documentary with new style",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/2.5.png.png",
-    videoFile: "/videos/filess/dahkoutsfx.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/b9vANRrnOl4", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -108,7 +108,7 @@ projects: [
     title: "Documentary",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/1.1.png",
-    videoFile: "/videos/filess/final mr best reel.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/4YhUtUQiuOE", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -117,7 +117,7 @@ projects: [
     title: "clean edit",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/2.4.png.png",
-    videoFile: "/videos/filess/with sfx clean.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/ndrx0ORLzts", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -126,7 +126,7 @@ projects: [
     title: "clean edit",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/2.2.png.png",
-    videoFile: "/videos/filess/revolution.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/ecluaPcUX0M", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -135,7 +135,7 @@ projects: [
     title: "edit",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/1.5.png.png",
-    videoFile: "/videos/filess/jdid.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/kRVRaodo9M0", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
@@ -144,7 +144,7 @@ projects: [
     title: "BasketBall edit",
     summary: "A breathtaking travel documentary...",
     image: "/videos/thumbnails/1.6.png.png",
-    videoFile: "/videos/filess/basket.mp4", // Add this line!
+    videoFile: "https://youtube.com/shorts/UNuad0TfLGs", // Add this line!
     techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
     urls: {},
     category: "Documentary",
