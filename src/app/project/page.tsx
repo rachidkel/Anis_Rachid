@@ -99,44 +99,7 @@ export default function Project() {
                     <p className="text-sm font-normal line-clamp-2">
                       {project.summary}
                     </p>
-                    <div className="grid grid-flow-col gap-4 mt-4">
-                      {project?.urls?.demo && (
-                        <a
-                          href={project.urls?.demo}
-                          className="flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-200 transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 line-clamp-1"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          <FaGlobe className="size-4" />
-                          <span>Demo</span>
-                        </a>
-                      )}
-
-                      {project?.urls?.github && (
-                        <a
-                          href={project.urls?.github}
-                          rel="noopener noreferrer"
-                          className="flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-200 transform bg-black rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 line-clamp-1"
-                          target="_blank"
-                        >
-                          <BsGithub className="size-4" />
-                          <span>Github</span>
-                        </a>
-                      )}
-
-                      {/* figma */}
-                      {project?.urls?.figma && (
-                        <Link
-                          href={project.urls?.figma}
-                          className="flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-200 transform bg-purple-600 rounded-lg shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 line-clamp-1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FiFigma className="size-4" />
-                          <span>Figma</span>
-                        </Link>
-                      )}
-                    </div>
+                                        
                   </div>
                 </div>
               </div>
