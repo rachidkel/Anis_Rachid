@@ -9,6 +9,7 @@ import MotionWrapper from "@/components/motion-wrapper";
 import SectionHeader from "@/components/section-header";
 import { CONFIG } from "@/config";
 import { ASSETS } from "@/constant/assets";
+import { VideoPlayer } from "@/components/video-player";
 
 const tabs = [
   {
@@ -217,19 +218,14 @@ const MyLatestProjectSection = () => {
               <IoMdClose size={32} />
             </button>
             <div className="overflow-hidden bg-black rounded-2xl shadow-2xl">
-              <video
-                className="w-full aspect-video"
+              <VideoPlayer
+                src={selectedVideo.src}
+                title={selectedVideo.title}
                 poster={
                   CONFIG.projects.find((p) => p.title === selectedVideo.title)
                     ?.image
                 }
-                controls
-                autoPlay
-                playsInline
-              >
-                <source src={selectedVideo.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
               <div className="p-4 bg-gray-900">
                 <h3 className="text-lg font-semibold text-white">
                   {selectedVideo.title}
