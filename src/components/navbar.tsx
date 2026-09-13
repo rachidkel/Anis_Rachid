@@ -79,13 +79,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <a
-              className="px-6 py-2 text-white dk-gradient-btn rounded-xl"
-              href={CONFIG.resume.downloadUrl}
-              download={CONFIG.resume.fileName}
-            >
-              Resume
-            </a>
+
           </div>
           {/* mobile hamburger menu */}
           <div className="z-50 md:hidden">
@@ -149,20 +143,6 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="flex text-white rounded-lg dk-gradient-bg">
-              <a
-                href="/"
-                className="flex-1 py-4 dk-safe-x-padding"
-                download="Deri Kurniawan Resume"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-semibold">Resume</span>
-                  <span className="text-4xl">
-                    <BsFileEarmarkPerson />
-                  </span>
-                </div>
-              </a>
-            </li>
           </ul>
         </div>
       </div>

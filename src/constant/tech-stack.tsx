@@ -1,79 +1,77 @@
-import {
-  SiExpo,
-  SiExpress,
-  SiJavascript,
-  SiLaravel,
-  SiNextdotjs,
-  SiPrisma,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+// src/constant/tech-stack.tsx
 
-/**
- * Register your tech stack used in your projects here.
- * Make sure the key is the same as the one used in the project config.
- */
+import { ReactNode } from "react";
+
+import afterEffectsIcon from "@/assets/images/icons/after-effects.svg";
+import premiereProIcon from "@/assets/images/icons/premiere-pro.svg";
+import davinciResolveIcon from "@/assets/images/icons/davinci-resolve.svg";
+import capcutIcon from "@/assets/images/icons/capcut.svg";
+
+
+export interface TechStack {
+  name: string;
+  icon: ReactNode;
+  color: string;
+  siteUrl: string;
+}
+
 export const TECH_STACK = {
-  nextjs: {
-    name: "Next JS",
-    icon: <SiNextdotjs />,
-    color: "text-gray-900",
-    siteUrl: "https://nextjs.org/",
+  afterEffects: {
+    name: "After Effects",
+    icon: (
+      <img
+        src={afterEffectsIcon.src}
+        alt="Adobe After Effects"
+        width={48}
+        height={48}
+      />
+    ),
+    color: "text-blue-500",
+    siteUrl: "https://www.adobe.com/products/aftereffects.html",
   },
-  laravel: {
-    name: "Laravel",
-    icon: <SiLaravel />,
+
+  premierePro: {
+    name: "Premiere Pro",
+    icon: (
+      <img
+        src={premiereProIcon.src}
+        alt="Adobe Premiere Pro"
+        width={48}
+        height={48}
+      />
+    ),
+    color: "text-purple-500",
+    siteUrl: "https://www.adobe.com/products/premiere.html",
+  },
+
+  davinciResolve: {
+    name: "DaVinci Resolve",
+    icon: (
+      <img
+        src={davinciResolveIcon.src}
+        alt="DaVinci Resolve"
+        width={48}
+        height={48}
+      />
+    ),
     color: "text-red-500",
-    siteUrl: "https://laravel.com/",
+    siteUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
   },
-  expo: {
-    name: "Expo",
-    icon: <SiExpo />,
-    color: "text-black",
-    siteUrl: "https://expo.dev/",
+
+  capcut: {
+    name: "CapCut",
+    icon: (
+      <img
+        src={capcutIcon.src}
+        alt="CapCut"
+        width={48}
+        height={48}
+      />
+    ),
+    color: "text-gray-400",
+    siteUrl: "https://www.capcut.com/",
   },
-  prisma: {
-    name: "Prisma",
-    icon: <SiPrisma />,
-    color: "text-neutral-800",
-    siteUrl: "https://www.prisma.io/",
-  },
-  expressjs: {
-    name: "Express JS",
-    icon: <SiExpress />,
-    color: "text-black",
-    siteUrl: "https://expressjs.com/",
-  },
-  javascript: {
-    name: "Javascript",
-    icon: <SiJavascript />,
-    color: "text-yellow-400",
-    siteUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  reactjs: {
-    name: "React JS",
-    icon: <SiReact />,
-    color: "text-blue-500",
-    siteUrl: "https://reactjs.org/",
-  },
-  tailwindcss: {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss />,
-    color: "text-cyan-500",
-    siteUrl: "https://tailwindcss.com/",
-  },
-  reactnative: {
-    name: "React Native",
-    icon: <TbBrandReactNative />,
-    color: "text-blue-500",
-    siteUrl: "https://reactnative.dev/",
-  },
-  typescript: {
-    name: "Typescript",
-    icon: <SiTypescript />,
-    color: "text-blue-600",
-    siteUrl: "https://www.typescriptlang.org/",
-  },
-} satisfies Record<string, TechStack>;
+
+
+  
+};

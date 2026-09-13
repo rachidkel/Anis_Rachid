@@ -53,6 +53,7 @@ declare type Config = {
     title: string;
     summary: string;
     image: StaticImageData | string;
+    videoFile?: string; 
     techStack: {
       name: string;
       icon: React.ReactNode;

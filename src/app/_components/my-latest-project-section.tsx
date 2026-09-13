@@ -1,12 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BsGithub } from "react-icons/bs";
-import { FiFigma } from "react-icons/fi";
-import { IoMdOpen } from "react-icons/io";
+import { IoMdPlay, IoMdClose } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import MotionWrapper from "@/components/motion-wrapper";
 import SectionHeader from "@/components/section-header";
@@ -15,7 +12,7 @@ import { ASSETS } from "@/constant/assets";
 
 const tabs = [
   {
-    name: "Project",
+    name: "Videos",
     image: ASSETS.home.myLatestProject.suitcase,
     data: [...CONFIG.projects],
   },
@@ -23,11 +20,17 @@ const tabs = [
     name: "More",
     image: ASSETS.home.myLatestProject.rocket,
     data: [],
+    // 👇 CHANGE THIS LINK TO YOUR CHANNEL / PORTFOLIO / INSTAGRAM
+    externalLink: "https://drive.google.com/drive/folders/1Zp0NpQ_CrxFjkDjJXa4afnMfL0g1Khu1?usp=sharing",
   },
 ];
 
 const MyLatestProjectSection = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [selectedVideo, setSelectedVideo] = useState<{
+    src: string;
+    title: string;
+  } | null>(null);
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -44,11 +47,20 @@ const MyLatestProjectSection = () => {
     }
   }, []);
 
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedVideo(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
     <section ref={ref} className="dk-safe-x-padding dk-section-distance">
       <SectionHeader
-        title="My Latest Project"
-        description="Take a look at something I've worked on, such as a case study, real project, and more."
+        title="My Latest Videos"
+        description="Take a look at some of my recent video editing work, motion graphics, and creative projects."
         inViewport={inView}
         className="text-center"
         animate
@@ -68,8 +80,11 @@ const MyLatestProjectSection = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 onClick={() => {
+                  // 👇 UPDATED: Open external link for "More" tab
                   if (index === tabs.length - 1) {
-                    router.push("/project");
+                    if (tab.externalLink) {
+                      window.open(tab.externalLink, "_blank");
+                    }
                     return;
                   }
                   setActiveTab(index);
@@ -97,8 +112,9 @@ const MyLatestProjectSection = () => {
               </MotionWrapper>
             ))}
           </div>
+
           {/* content */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden flex-1">
             <div className="bg-gray rounded-[36px] p-[26px] w-full h-[600px] overflow-y-auto">
               <div className="grid grid-flow-row grid-cols-12 gap-[26px]">
                 {tabs.map((tab, tabIndex) =>
@@ -114,79 +130,61 @@ const MyLatestProjectSection = () => {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
-                          <div className="col-span-6">
+                          <div>
                             <MotionWrapper
-                              className="bg-white p-[26px] rounded-2xl md:rounded-[25px] h-[261px] overflow-hidden"
+                              className="relative bg-white p-[26px] rounded-2xl md:rounded-[25px] h-[261px] overflow-hidden cursor-pointer flex items-center justify-center"
                               initial={{ opacity: 0, x: -50 }}
                               animate={inView ? { opacity: 1, x: 0 } : {}}
                               transition={{
                                 duration: 0.5,
                                 delay: 0.2 + dataIndex * 0.1,
                               }}
+                              onClick={() =>
+                                setSelectedVideo({
+                                  src: item.videoFile || item.urls?.demo || "",
+                                  title: item.title,
+                                })
+                              }
                             >
-                              <Image
-                                className="object-contain w-full h-auto"
-                                src={item.image}
-                                alt={`${item.title} project image`}
-                                width={441}
-                                height={261}
-                                priority
-                              />
+                              <div className="relative w-full h-full">
+                                <Image
+                                  className="object-contain"
+                                  src={item.image}
+                                  alt={`${item.title} video thumbnail`}
+                                  fill
+                                  sizes="(max-width: 1280px) 100vw, 441px"
+                                  priority
+                                />
+                              </div>
+
+                              <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                                <div className="p-5 bg-white/20 backdrop-blur-md rounded-full">
+                                  <IoMdPlay className="text-4xl text-white" />
+                                </div>
+                              </div>
                             </MotionWrapper>
                           </div>
-                          <div className="absolute top-0 bottom-0 left-0 right-0 transition-all duration-300 opacity-0 backdrop-blur-0 gap-y-2 group-hover:opacity-100 group-hover:backdrop-blur-sm bg-gray/10 rounded-2xl">
+
+                          <div className="absolute top-0 bottom-0 left-0 right-0 transition-all duration-300 opacity-0 backdrop-blur-0 gap-y-2 group-hover:opacity-100 group-hover:backdrop-blur-sm bg-gray/10 rounded-2xl pointer-events-none">
                             <div className="flex flex-col items-center justify-center w-full h-full select-none lg:select-auto">
                               <p className="p-8 text-xl font-bold text-center transition-all duration-150 ease-in-out line-clamp-1">
                                 {item.title}
                               </p>
                               <div className="flex flex-row gap-4 text-3xl">
-                                {item?.urls?.demo && (
-                                  <Link
-                                    className="p-4 transition-all duration-300 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls?.demo,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
+                                {item.videoFile && (
+                                  <button
+                                    className="p-4 transition-all duration-300 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary pointer-events-auto"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedVideo({
+                                        src: item.videoFile || "",
+                                        title: item.title,
+                                      });
                                     }}
-                                    target="_blank"
-                                    title="Demo"
+                                    title="Watch Video"
                                   >
-                                    <IoMdOpen />
-                                  </Link>
-                                )}
-                                {item?.urls?.github && (
-                                  <Link
-                                    className="p-4 transition-all duration-150 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls?.github,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
-                                    }}
-                                    target="_blank"
-                                    title="GitHub Repository"
-                                  >
-                                    <BsGithub />
-                                  </Link>
-                                )}
-                                {item?.urls?.figma && (
-                                  <Link
-                                    className="p-4 transition-all duration-150 ease-in-out bg-gray rounded-2xl hover:text-white hover:bg-linear-to-r hover:from-primary hover:to-secondary"
-                                    href={{
-                                      pathname: item.urls.figma,
-                                      query: {
-                                        utm_medium: "campaign",
-                                        utm_campaign: "3d-theme-portfolio",
-                                      },
-                                    }}
-                                    target="_blank"
-                                    title="Figma Design"
-                                  >
-                                    <FiFigma />
-                                  </Link>
+                                    <IoMdPlay />
+                                  </button>
                                 )}
                               </div>
                             </div>
@@ -200,6 +198,47 @@ const MyLatestProjectSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute -top-12 right-0 p-2 text-white transition-colors hover:text-primary"
+              title="Close"
+            >
+              <IoMdClose size={32} />
+            </button>
+            <div className="overflow-hidden bg-black rounded-2xl shadow-2xl">
+              <video
+                className="w-full aspect-video"
+                poster={
+                  CONFIG.projects.find((p) => p.title === selectedVideo.title)
+                    ?.image
+                }
+                controls
+                autoPlay
+                playsInline
+              >
+                <source src={selectedVideo.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-4 bg-gray-900">
+                <h3 className="text-lg font-semibold text-white">
+                  {selectedVideo.title}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

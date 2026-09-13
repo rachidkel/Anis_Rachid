@@ -1,14 +1,17 @@
 export const ASSETS = {
   home: {
     hero: {
-      avatarSmile: require("@/assets/images/home/hero/avatar-smile.webp"),
+      avatarSmile: require("@/assets/images/home/hero/avatare-smile.webp"),
     },
     letsConnect: {
       avatarBigSmile: require("@/assets/images/home/letsConnect/avatar-big-smile.webp"),
+
       behance: require("@/assets/images/home/letsConnect/behance.webp"),
       discord: require("@/assets/images/home/letsConnect/discord.webp"),
       dribbble: require("@/assets/images/home/letsConnect/dribbble.webp"),
       facebook: require("@/assets/images/home/letsConnect/facebook.webp"),
+      whatssap: require("@/assets/images/home/letsConnect/whatssap.webp"),
+
       github: require("@/assets/images/home/letsConnect/github.webp"),
       gmail: require("@/assets/images/home/letsConnect/gmail.webp"),
       instagram: require("@/assets/images/home/letsConnect/instagram.webp"),

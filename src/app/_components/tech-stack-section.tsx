@@ -16,7 +16,7 @@ const TechStackSection = () => {
     <section ref={ref} className="dk-safe-x-padding dk-section-distance">
       <SectionHeader
         title="Technology Stack"
-        description="I am concerned about security and performance for my clients. That's why I always keep updating and use the best technologies in a product."
+        description=" As a video editor and motion designer, I use industry-standard tools to create professional, high-quality content that captivates audiences."
         inViewport={inView}
         className="text-center"
         animate

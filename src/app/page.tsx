@@ -7,7 +7,7 @@ import TechStackSection from "./_components/tech-stack-section";
 
 export const metadata = {
   title: "Home - Portfolio",
-  description: "Deri Kurniawan Portfolio",
+  description: "Anis Rachid Portfolio",
 };
 
 export default function Home() {

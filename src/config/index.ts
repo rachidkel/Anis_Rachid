@@ -9,39 +9,39 @@ import { TECH_STACK } from "../constant/tech-stack";
 
 export const CONFIG = {
   name: {
-    first: "Deri",
-    last: "Kurniawan",
+    first: "Anis Rachid",
+    last: "Kellil",
   },
-  email: "hi@derikn.com",
-  role: "Full-stack Web Developer",
-  location: "Sukabumi Regency, West Java, Indonesia",
+  email: "aniskel96@gmail.com",
+  role: "video editor & Motion designer",
+  location: "Algeria",
   socials: {
-    github: "https://github.com/Deri-Kurniawan",
-    linkedin: "https://www.linkedin.com/in/deri-kurniawan",
-    instagram: "https://www.instagram.com/deri561",
-    dribbble: "https://dribbble.com/deri-kurniawan",
+    github: "https://github.com/rachidkel",
+    linkedin: "https://www.linkedin.com/in/kellil-anis-rachid",
+    instagram: "https://www.instagram.com/kl._anis/",
+    dribbble: "https://wa.me/+213557682232",
   },
   // Let's Connect: 5 fixed positions. Use ASSETS for icon, comment out or set null to hide.
   letsConnect: {
     topLeft: {
       icon: ASSETS.home.letsConnect.linkedin,
-      href: "https://www.linkedin.com/in/deri-kurniawan",
+      href: "https://www.linkedin.com/in/kellil-anis-rachid",
       label: "LinkedIn",
     },
     topRight: {
       icon: ASSETS.home.letsConnect.instagram,
-      href: "https://www.instagram.com/deri561",
+      href: "https://www.instagram.com/kl._anis/",
       label: "Instagram",
     },
     bottomRight: {
       icon: ASSETS.home.letsConnect.github,
-      href: "https://github.com/Deri-Kurniawan",
+      href: "https://github.com/rachidkel",
       label: "GitHub",
     },
     bottomLeft: {
-      icon: ASSETS.home.letsConnect.twitter,
-      href: "https://x.com/derii561",
-      label: "X (Twitter)",
+      icon: ASSETS.home.letsConnect.whatssap,
+      href: "https://wa.me/+213557682232",
+      label: "WhatsApp",
     },
     bottomCenter: {
       icon: ASSETS.home.letsConnect.gmail,
@@ -50,8 +50,8 @@ export const CONFIG = {
     },
   },
   quotes: {
-    text: "This portfolio was made with heart and soul, pouring passion and creativity into every detail to bring it to life. It&apos;s not just a portfolio, it&apos;s a labor of love.",
-    author: "Deri Kurniawan",
+    text: "Behind every project is a story worth telling. This portfolio is a collection of those stories  edited with precision, crafted with passion.",
+    author: "Anis Rachid Kellil",
   },
   techStacks: [
     ...Object.values(TECH_STACK),
@@ -64,111 +64,90 @@ export const CONFIG = {
     fileName: "Sample.pdf",
     downloadUrl: "/files/sample.pdf",
   },
-  projects: [
+ // src/config/index.ts
+
+projects: [
+  {
+    title: " Social media",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/2.7.png",
+    videoFile: "/videos/filess/rabic ai platforme.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },
+  // Add more videos...
     {
-      title: "Portfolio Website 1",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        demo: "https://3d-portfolio.derikn.com",
-        github: "https://github.com/Deri-Kurniawan/3d-portfolio",
-        figma:
-          "https://www.figma.com/design/TYBBBbA5cvBN4QU70hNxvr/3D-PORTFOLIO?node-id=307-16&t=1mhoto9IrOWXBn4O-1",
-      },
-      category: "Web App",
-    },
+    title: "Socail Media ADS",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/1.3.png.png",
+    videoFile: "/videos/filess/ads edit with sfx.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "socail media ads",
+  },
     {
-      title: "Portfolio Website 2",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        demo: "https://3d-portfolio.derikn.com",
-        github: "https://github.com/Deri-Kurniawan/3d-portfolio",
-      },
-      category: "Web App",
-    },
+    title: "Podcast",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/2.3.pmg.png",
+    videoFile: "/videos/filess/viral style .mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },
     {
-      title: "Portfolio Website 3",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        demo: "https://3d-portfolio.derikn.com",
-        figma:
-          "https://www.figma.com/design/TYBBBbA5cvBN4QU70hNxvr/3D-PORTFOLIO?node-id=307-16&t=1mhoto9IrOWXBn4O-1",
-      },
-      category: "Web App",
-    },
+    title: "Documentary with new style",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/2.5.png.png",
+    videoFile: "/videos/filess/dahkoutsfx.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },
     {
-      title: "Portfolio Website 4",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        github: "https://github.com/Deri-Kurniawan/3d-portfolio",
-        figma:
-          "https://www.figma.com/design/TYBBBbA5cvBN4QU70hNxvr/3D-PORTFOLIO?node-id=307-16&t=1mhoto9IrOWXBn4O-1",
-      },
-      category: "Web App",
-    },
+    title: "Documentary",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/1.1.png",
+    videoFile: "/videos/filess/final mr best reel.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },
     {
-      title: "Portfolio Website 5",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        github: "https://github.com/Deri-Kurniawan/3d-portfolio",
-      },
-      category: "Web App",
-    },
+    title: "clean edit",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/2.4.png.png",
+    videoFile: "/videos/filess/with sfx clean.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },
     {
-      title: "Portfolio Website 6",
-      summary:
-        "A personal portfolio website to showcase my projects and skills, built with Next.js and Tailwind CSS.",
-      image: "/projects/3d-portfolio.webp",
-      techStack: [
-        TECH_STACK.reactjs,
-        TECH_STACK.nextjs,
-        TECH_STACK.tailwindcss,
-        TECH_STACK.typescript,
-      ],
-      urls: {
-        figma:
-          "https://www.figma.com/design/TYBBBbA5cvBN4QU70hNxvr/3D-PORTFOLIO?node-id=307-16&t=1mhoto9IrOWXBn4O-1",
-      },
-      category: "Web App",
-    },
-  ],
+    title: "clean edit",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/2.2.png.png",
+    videoFile: "/videos/filess/revolution.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },  
+    {
+    title: "edit",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/1.5.png.png",
+    videoFile: "/videos/filess/jdid.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  }, 
+      {
+    title: "BasketBall edit",
+    summary: "A breathtaking travel documentary...",
+    image: "/videos/thumbnails/1.6.png.png",
+    videoFile: "/videos/filess/basket.mp4", // Add this line!
+    techStack: [TECH_STACK.premierePro, TECH_STACK.davinciResolve],
+    urls: {},
+    category: "Documentary",
+  },     
+],
 } satisfies Config;
